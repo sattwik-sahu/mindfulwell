@@ -1,7 +1,6 @@
 import { collection, getDocs , query, where} from "firebase/firestore";
 import { firestore } from "./firebase";
 
-
 export const getAllOptions = () => {
   
   const colRef = collection(firestore, "options");
