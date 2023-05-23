@@ -5,11 +5,15 @@ import "./index.css";
 import { getAllSymptoms } from "./data/symptoms.js";
 import { onSnapshot } from "firebase/firestore";
 import { getAllQuestions } from "./data/questions.js";
+import { getAllMeditations } from "./data/meditations.js";
 
-const query = getAllSymptoms("DEP");
+const rand_elements=[];
+const query = getAllQuestions();
 onSnapshot(query, (snapshot) => {
   snapshot.docs.forEach((doc) => {
-    console.log({ id: doc.id, ...doc.data() });
+   console.log({ id: doc.id, ...doc.data() });
+   //rand_elements.push(doc.data())
+   //console.log(rand_elements);
   });
 });
 
@@ -18,3 +22,4 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <App />
   </React.StrictMode>
 );
+

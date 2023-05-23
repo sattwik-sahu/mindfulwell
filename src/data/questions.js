@@ -11,32 +11,26 @@ export const getAllQuestions = () => {
   const q_ANX = query(colRef,where("problem","==","ANX"));
   const q_SLP = query(colRef,where("problem","==","SLP"));
   const q_STR = query(colRef,where("problem","==","STR"));
-  const rand_elements= [];
-         onSnapshot(q_DEP,(snapshot) => {
-         snapshot.docs.forEach(() => {
-        rand_elements.push({...doc.data(),id : doc.id})
-      })
-    })
-     
-  function pickRandomElements(arr, n) {
-    var shuffled = arr.slice();
-    var i = arr.length;
-    var min = i - n ;
-    var temp;
-    var index;
-  
-    while (i-- > min) {
-      index = Math.floor((i + 1) * Math.random());
-      temp = shuffled[index];
-      shuffled[index] = shuffled[i];
-      shuffled[i] = temp;
-    }
-  
-    return shuffled.slice(min);
-  }
-  const rand=pickRandomElements(rand_elements,5);
-  return rand;
+//   function flattenQuery() {
+//     const query = [];
+//   // Create an empty array
+// //const queries = [];
+// // Add queries to the array using push()
+//  queries.push(q_DEP);
+//  queries.push(q_ANX);
+//  queries.push(q_STR);
+//  queries.push(q_SLP);
+//  const flattenedQuery = [].concat(...query);
+
+//  const flattenedArray = flattenQuery();
+
+//  console.log(flattenedArray);
+// }
 };
+// Alternatively, you can directly assign the queries to the array
+// const queries = ["Query 1", "Query 2", "Query 3", "Query 4"
+
+
 
   //const query = getDocs(colRef);
   //   query.then((snapshot) =>
