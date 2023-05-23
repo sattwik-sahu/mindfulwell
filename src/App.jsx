@@ -6,6 +6,7 @@ import Home from "./routes";
 import Auth from "./routes/Auth";
 import Awareness from "./routes/Awareness";
 import ErrorNotFound from "./routes/ErrorNotFound";
+import Header from "./components/layout/Header";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
 const App = () => {
   return (
     <div className="App">
+      <Header></Header>
       <RouterProvider router={router} />
     </div>
   );
