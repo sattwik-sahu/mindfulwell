@@ -8,7 +8,7 @@ import { getAllQuestions } from "./data/questions.js";
 import { getAllExercises } from "./data/exercises.js";
 import { getAllOptions } from "./data/options.js";
 
-const query = getAllOptions();
+const query = getAllExercises(["ANX_2"]);
 onSnapshot(query, (snapshot) => {
   snapshot.docs.forEach((doc) => {
     console.log({ id: doc.id, ...doc.data() });

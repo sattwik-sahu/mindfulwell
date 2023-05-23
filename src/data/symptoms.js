@@ -1,9 +1,9 @@
 import { collection, getDocs , query, where} from "firebase/firestore";
 import { firestore } from "./firebase";
 
-// Get all the questions
+// Get all the symptoms
 export const getAllSymptoms = (problem) => {
-  // Get a reference to the `questions` collection
+  // Get a reference to the `symptoms` collection
   const colRef = collection(firestore, "symptoms");
 
   // Run the query to fetch symptoms of particular problem
