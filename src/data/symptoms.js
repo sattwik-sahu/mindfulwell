@@ -9,8 +9,9 @@ export const getAllSymptoms = (problem) => {
   // Run the query to fetch symptoms of particular problem
   const q = query(colRef,where("problem","==",problem)) 
   //const query = getDocs(colRef);
+  //const rand []
   //   query.then((snapshot) =>
-  //     snapshot.docs.forEach((doc) => {
+  //     snapshot.docs.forEach(() => {
   //       console.log(doc.data());
   //     })
   //   );
