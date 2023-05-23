@@ -12,7 +12,7 @@ Institute: Indian Institute of Science Education and Research Bhopal
 
 Members:
 
-- [sattwik-sahu](https://github.com/sattwik-sahu) (Sattwik Sahu)
+- [sattwik-sahu](https://github.com/sattwik-sahu) (Sattwik Sahu) (Team leader)
 - [Sanika003](https://github.com/Sanika003) (Sanika Fartode)
 - [Aryan23132](https://github.com/Aryan23132) (Aryan Jain)
 - [siddhi-lipare](https://github.com/siddhi-lipare) (Siddhi Lipare)
