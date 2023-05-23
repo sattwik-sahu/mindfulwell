@@ -1,12 +1,10 @@
 import { collection, getDocs , query, where} from "firebase/firestore";
 import { firestore } from "./firebase";
 
-// Get all the questions
-export const getAllOptions = () => {
-  // Get a reference to the `questions` collection
-  const colRef = collection(firestore, "options");
 
-  // Run the query to fetch symptoms of particular problem
+export const getAllOptions = () => {
+  
+  const colRef = collection(firestore, "options");
 
   const query = getDocs(colRef);
     query.then((snapshot) =>
