@@ -5,8 +5,8 @@ import "./index.css";
 import { getAllSymptoms } from "./data/symptoms.js";
 import { onSnapshot } from "firebase/firestore";
 import { getAllQuestions } from "./data/questions.js";
-
-const query = getAllSymptoms("DEP");
+import { getAllMeditations } from "./data/meditations.js";
+const query = getAllMeditations(["DEP_2"]);
 onSnapshot(query, (snapshot) => {
   snapshot.docs.forEach((doc) => {
     console.log({ id: doc.id, ...doc.data() });
