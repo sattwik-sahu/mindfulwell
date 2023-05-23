@@ -1,4 +1,4 @@
-import { collection, getDocs , query, query, where} from "firebase/firestore";
+import { collection, getDocs , query, where} from "firebase/firestore";
 import { firestore } from "./firebase";
 
 // Get all the questions

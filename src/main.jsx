@@ -4,6 +4,7 @@ import App from "./App.jsx";
 import "./index.css";
 import { getAllSymptoms } from "./data/symptoms.js";
 import { onSnapshot } from "firebase/firestore";
+import { getAllQuestions } from "./data/questions.js";
 
 const query = getAllSymptoms("DEP");
 onSnapshot(query, (snapshot) => {

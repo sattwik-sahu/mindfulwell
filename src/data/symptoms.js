@@ -20,11 +20,11 @@ export const getAllSymptoms = (problem) => {
 
 };
 
-const test = () => {
-  const query1 = getAllSymptoms("ANX")
-      query1.then((snapshot) =>
-      snapshot.docs.forEach((doc) => {
-        console.log(doc.data());
-      }))
-}
-test()
+// const test = () => {
+//   const query1 = getAllSymptoms("ANX")
+//       query1.then((snapshot) =>
+//       snapshot.docs.forEach((doc) => {
+//         console.log(doc.data());
+//       }))
+// }
+// test()
