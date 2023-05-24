@@ -7,13 +7,11 @@ import { onSnapshot } from "firebase/firestore";
 import { getAllQuestions } from "./data/questions.js";
 import { getAllMeditations } from "./data/meditations.js";
 
-const rand_elements=[];
 const query = getAllQuestions();
 onSnapshot(query, (snapshot) => {
   snapshot.docs.forEach((doc) => {
    console.log({ id: doc.id, ...doc.data() });
-   //rand_elements.push(doc.data())
-   //console.log(rand_elements);
+
   });
 });
 
