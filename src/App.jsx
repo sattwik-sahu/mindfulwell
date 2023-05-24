@@ -28,7 +28,9 @@ const App = () => {
   return (
     <div className="App">
       <Header></Header>
-      <RouterProvider router={router} />
+      <main>
+        <RouterProvider router={router} />
+      </main>
     </div>
   );
 };

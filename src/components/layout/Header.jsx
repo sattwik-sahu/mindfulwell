@@ -1,6 +1,6 @@
 import * as React from "react";
-import { auth } from "../../../data/firebase";
-import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "../../data/firebase";
+import { onAuthStateChanged, signOut } from "firebase/auth";
 
 const Header = () => {
   const [user, setUser] = React.useState(auth.currentUser);
@@ -16,6 +16,9 @@ const Header = () => {
       {user && (
         <section className="user_image">
           <img
+            onClick={() => {
+              signOut(auth);
+            }}
             src={user?.photoURL}
             alt={`Photo of ${user?.displayName || "User photo"}`}
           />
