@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  :root {
+    @apply font-sans;
+  }
+
+  body {
+    @apply m-0 p-0 box-border min-w-full min-h-screen;
+  }
+
+  .App {
+    @apply grid grid-rows-6 min-h-screen;
+  }
+
+  .App > main {
+    @apply row-span-5 w-full;
+  }
+
+  .Header {
+    @apply row-span-1 h-20 flex flex-shrink items-center bg-primary text-white shadow-lg;
+  }
+
+  .Header section.brand {
+    @apply flex-grow p-4 font-serif text-xl font-bold;
+  }
+
+  .Header section.user_image {
+    @apply p-3;
+  }
+
+  .Header section.user_image img {
+    @apply w-12 h-12 rounded-full;
+  }
+
+  .Home {
+    @apply grid place-items-center;
+  }
+
+  .tagline {
+    @apply font-serif text-3xl font-semibold text-gray-600 p-12;
+  }
+
+  .btn_main {
+    @apply p-3 grid place-items-center;
+  }
+
+  .btn_main button {
+    @apply px-6 py-4 bg-secondary shadow-md text-white text-xl flex justify-around items-center gap-4 rounded-md;
+  }
+
+  .Auth {
+    @apply h-full grid place-items-center;
+  }
+}
